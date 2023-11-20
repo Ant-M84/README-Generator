@@ -19,10 +19,19 @@ function renderLicenseBadge(license) {
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-  if (license !== "No License") {
-    return (`[License](#License-📛)`)
+  if (license === "MIT") {
+    return `(https://mit-license.org/)`;
+  }  else if (license === "Apache") {
+    return `(https://www.apache.org/licenses/LICENSE-2.0)`;
+  } else if (license === "GPL") {
+    return `(https://www.gnu.org/licenses/gpl-3.0.en.html)`;
+  } else if (license === "BSD-2") {
+    return `(https://imagej.net/licensing/bsd)`;
+  } else if (license === "BSD-3") {
+    return `(https://imagej.net/licensing/bsd)`;
+  } else { (license === "No License") 
+    return "";
   }
-  return (`[License](Not Under License)`)
 }
 
 // TODO: Create a function that returns the license section of README
@@ -42,6 +51,8 @@ const generateMarkdown = ({title, description, installation, usage, license, con
   `# ${title}
 ${renderLicenseBadge(license)}
 
+${renderLicenseLink(license)}
+
 ## Description
 
 ${description}.
@@ -50,8 +61,8 @@ ${description}.
 
 - [Installation](#installation)
 - [Usage](#usage)
-- ${renderLicenseLink(license)}
-- [Contribute](#howtocontribute)
+- [License](#license)
+- [Contribute](#contribute)
 - [Tests](#tests)
 - [Questions](#questions)
 
@@ -67,7 +78,7 @@ ${usage}
 
 ${renderLicenseSection(license)}
 
-## How to Contribute
+## Contribute
 
 ${contributing}
 
@@ -79,7 +90,7 @@ ${tests}
 
 For additional support, view the GitHub page for the author below:
 
-- GitHub: ["${github}"](https://github.com/${github}/)
+- GitHub: "${github}": (https://github.com/${github}/)
 - Email: ${email}
 `;
 
