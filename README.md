@@ -8,15 +8,6 @@ README-Generator Video Tutorial: https://drive.google.com/file/d/1u0cWPymqs-s3zN
 
 This application well help a user to generate a professional README.md document by answering several prompts to gain the required information to populate and generate a README file.
 
-## Table of Contents (Optional)
-
-If your README is long, add a table of contents to make it easy for users to find what they need.
-
-- [Installation](#installation)
-- [Usage](#usage)
-- [Credits](#credits)
-- [License](#license)
-
 ## Installation
 
 Clone the repository from the URL link in the description to a local repository.
@@ -34,3 +25,7 @@ To use the application:
 5. Copy, paste and rename 'new-README.md' in the relevant repository as required.
 
 ![README-Generator Application](./images/application-screenshot.jpg)
+
+## Credits
+
+This application was made utilizing starter source code as provided from UNC Chapel Hill - Full Stack Bootcamp.
